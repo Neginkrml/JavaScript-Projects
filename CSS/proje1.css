@@ -7,11 +7,11 @@
 .container {
   width: 100%;
   min-height: 100vh;
-  background: rgb(238, 174, 202);
+  background: rgb(172, 190, 203);
   background: radial-gradient(
     circle,
-    rgba(238, 174, 202, 1) 0%,
-    rgba(148, 187, 233, 1) 100%
+    rgb(184, 202, 215) 0%,
+    rgb(76, 84, 93) 100%
   );
   pad: 10px;
 }
