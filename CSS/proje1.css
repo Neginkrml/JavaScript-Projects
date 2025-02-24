@@ -93,3 +93,42 @@ ul li span:hover {
   background-color: #e9ebf0;
   border-radius: 50%;
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .todo-app {
+    max-width: 90%;
+    padding: 30px 20px 50px;
+  }
+  .btn {
+    padding: 12px 30px;
+    font-size: 14px;
+  }
+  .input-box {
+    padding: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .todo-app {
+    max-width: 95%;
+    margin: 50px auto 20px;
+    padding: 20px;
+  }
+  .title {
+    font-size: 20px;
+  }
+  .row {
+    flex-direction: column;
+    padding-left: 0;
+  }
+  .input-box {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  .btn {
+    width: 100%;
+    padding: 12px;
+  }
+}
