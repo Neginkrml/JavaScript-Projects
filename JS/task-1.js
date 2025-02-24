@@ -1,7 +1,11 @@
 const inputBox = document.querySelector(".input-box")
 const listContainer = document.querySelector(".list-container")
 
-
+inputBox.addEventListener("keydown", function (event) {
+    if (event.key === "Enter") {
+        addTask();
+    }
+});
 
 function addTask() {
     if (inputBox.value === "") {
