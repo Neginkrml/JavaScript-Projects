@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+}
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background: rgb(238, 174, 202);
+  background: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(148, 187, 233, 1) 100%
+  );
+  pad: 10px;
+}
+.todo-app {
+  width: 100%;
+  max-width: 540px;
+  background: #fbfbfb;
+  /* background-color: white; */
+  margin: 100px auto 20px;
+  padding: 40px 30px 70px;
+  border-radius: 15px;
+}
+.title {
+  color: #092147;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.fa-solid {
+  padding-left: 10px;
+}
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #e9ebf0;
+  border-radius: 30px;
+  padding-left: 20px;
+  margin-bottom: 25px;
+}
+.input-box {
+  flex: 1;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  padding: 10px;
+}
+.btn {
+  border: none;
+  outline: none;
+  padding: 16px 50px;
+  background-color: rgba(193, 192, 203, 0.704);
+  font-size: 16px;
+  border-radius: 40px;
+  cursor: pointer;
+}
+ul li {
+  list-style: none;
+  font-size: 17px;
+  padding: 12px 8px 12px 50px;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+}
+ul li::before {
+  content: "";
+  position: absolute;
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+}
+ul li.checked {
+  color: #555;
+  text-decoration: line-through;
+}
+
+ul li span {
+  position: absolute;
+  right: 0;
+  top: 5px;
+  width: 40px;
+  height: 40px;
+  font-size: 22px;
+  color: #555;
+  line-height: 40px;
+  text-align: center;
+}
+ul li span:hover {
+  background-color: #e9ebf0;
+  border-radius: 50%;
+}
