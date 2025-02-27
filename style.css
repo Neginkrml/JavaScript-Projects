@@ -1,84 +1,98 @@
-/* Genel resetleme ve margin/padding sıfırlama */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Body için arka plan fotoğrafı */
 body {
-  font-family: "Arial", sans-serif;
-  background-image: url("./image/pexels-matreding-28588328.jpg"); /* Buraya fotoğrafın yolunu yaz */
-  background-size: cover; /* Fotoğrafın tüm ekranı kaplamasını sağlar */
-  background-position: center; /* Fotoğrafın ortalanması */
-  background-attachment: fixed; /* Fotoğrafın sabit kalmasını sağlar */
-  height: 100vh; /* Sayfa yüksekliği */
-  color: white; /* Yazı rengini beyaz yapalım */
-}
-
-/* Proje bölümü */
-.proje-div {
-  width: 100%;
-  height: 100vh; /* Tam ekran yüksekliği */
-  display: flex;
-  justify-content: center; /* Yatayda ortalama */
-  align-items: center; /* Dikeyde ortalama */
-  position: absolute; /* Sayfada tam ortada olabilmesi için */
-}
-
-/* Proje listesi */
-.proje-ul {
-  list-style-type: none;
-  padding: 0;
   margin: 0;
+  padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: 100vh; /* Yüksekliği min-height olarak ayarladık */
+  background: url("./image/pexels-matreding-28588328.jpg") no-repeat center
+    center;
+  background-size: cover; /* Resmi ekran boyutuna göre ayarla */
+  background-attachment: fixed; /* Arka plan kaymasın */
 }
 
-/* Proje li elemanları */
-.proje-li {
+.proje-div {
+  background: rgba(255, 255, 255, 0.2);
   padding: 20px;
-  background-color: rgba(0, 0, 0, 0.8); /* Mavi renk ve saydamlık */
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hafif gölge */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover efekt */
-  text-align: center; /* Başlıkların ortalanması */
-  width: 100%; /* Tüm genişliği kapsaması için */
-  max-width: 300px; /* Maksimum genişlik */
-  opacity: 0; /* Başlangıçta görünür değil */
-  animation: fadeIn 1s forwards; /* Fade in animasyonu */
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
 }
 
-/* Proje başlıkları */
+.proje-ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.proje-li {
+  width: 200px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 15px;
+  border-radius: 10px;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
 .proje-li a {
   text-decoration: none;
   color: white;
-  font-size: 1.2rem;
+  font-size: 18px;
   font-weight: bold;
+  display: block;
 }
 
-/* Hover efektleri */
 .proje-li:hover {
-  transform: translateY(-5px); /* Hoverda yukarı kayma */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Hoverda daha belirgin gölge */
+  transform: scale(1.1);
+  background: rgba(0, 0, 0, 0.9);
 }
 
-/* Animasyon: Fade in */
-@keyframes fadeIn {
-  to {
-    opacity: 1; /* Görünür hale gelme */
-  }
-}
-
-/* Mobil uyumluluk */
+/* RESPONSIVE TASARIM */
 @media (max-width: 768px) {
-  .proje-ul {
-    flex-direction: column;
-    gap: 15px;
+  body {
+    height: auto;
+    padding: 50px 0;
+    align-items: flex-start;
+    background-attachment: scroll; /* Mobilde daha iyi görünmesi için */
+    background-position: center top; /* Resmi daha iyi konumlandır */
+  }
+
+  .proje-div {
+    width: 95%;
+    max-width: 350px;
+    padding: 15px;
   }
 
   .proje-li {
-    padding: 15px;
+    width: 90%;
+    max-width: 250px;
+  }
+
+  .proje-li a {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .proje-div {
+    width: 90%;
+    max-width: 300px;
+    padding: 10px;
+  }
+
+  .proje-li {
+    width: 100%;
+    padding: 12px;
+  }
+
+  .proje-li a {
+    font-size: 14px;
   }
 }
