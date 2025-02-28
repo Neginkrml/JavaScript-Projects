@@ -19,22 +19,38 @@ async function checkWeather( city) {
     document.querySelector(".temp").innerHTML = Math.round(data.main.temp)+ "°c";
     document.querySelector(".humidity").innerHTML = data.main.humidity +"%";
     document.querySelector(".wind").innerHTML = data.wind.speed + " km/h";
-
-    if (data.weather[0].main === "Clouds") {
-        weatherIcon.classList.add("fa-cloud"); // Bulut simgesi
-    } else if (data.weather[0].main === "Clear") {
-        weatherIcon.classList.add("fa-sun"); // Güneş simgesi
-    } else if (data.weather[0].main === "Rain") {
-        weatherIcon.classList.add("fa-cloud-showers-heavy"); // Yağmur simgesi
-    } else if (data.weather[0].main === "Drizzle") {
-        weatherIcon.classList.add("fa-cloud-rain"); // Hafif Yağmur simgesi
-    } else if (data.weather[0].main === "Mist") {
-        weatherIcon.classList.add("fa-smog"); // Sis simgesi
-    } else if (data.weather[0].main === "Snow") {
-        weatherIcon.classList.add("fa-snowflake"); // Kar simgesi
-    } else if (data.weather[0].main === "Thunderstorm") {
-        weatherIcon.classList.add("fa-bolt"); // Fırtına simgesi
+    
+        const hava = data.weather[0].main;
+        
+        switch (hava) {
+            case "Clouds":
+                weatherIcon.classList.add("fa-cloud");
+                break
+            case "Clear":
+                weatherIcon.classList.add("fa-sun");
+                break
+            case "Rain":
+                weatherIcon.classList.add("fa-cloud-showers-heavy");
+                break
+            case "Drizzle":
+                weatherIcon.classList.add("fa-cloud-rain");
+                break
+            case "Mist":
+                weatherIcon.classList.add("fa-smog");
+                break;
+            case "Snow":
+                weatherIcon.classList.add("fa-snowflake");
+                break
+            case "Thunderstorm":
+                weatherIcon.classList.add("fa-bolt");
+                break
+            
+            default:
+                break         
     }
+
+
+
     document.querySelector(".weather").style.display = "block";
     }
 }

@@ -13,14 +13,13 @@
     rgb(184, 202, 215) 0%,
     rgb(76, 84, 93) 100%
   );
-  pad: 10px;
+  padding-top: 100px;
 }
 .todo-app {
   width: 100%;
   max-width: 540px;
   background: #fbfbfb;
-  /* background-color: white; */
-  margin: 100px auto 20px;
+  margin: 0px auto 20px;
   padding: 40px 30px 70px;
   border-radius: 15px;
 }
