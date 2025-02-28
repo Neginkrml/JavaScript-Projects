@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../PROJE-4/proje4.css" />
+  </head>
+  <body>
+    <div class="container" id="input-container">
+      <h2>Quiz Sorularnı Ekleyin</h2>
+      <input type="text" id="question" placeholder="Soruyu girin" />
+      <input type="text" id="answer" placeholder="Doğru cevabı girin" />
+      <button onclick="addQuestion()">Soru Ekle</button>
+      <button onclick="startQuiz()">Teste Başla</button>
+    </div>
+
+    <div class="container hidden" id="quiz-container">
+      <h2 id="quiz-question"></h2>
+      <input type="text" id="quiz-answer" placeholder="Cevabınızı girin" />
+      <button onclick="checkAnswer()">Cevabı Gönder</button>
+    </div>
+    <script src="../PROJE-4/task-4.js"></script>
+  </body>
+</html>
