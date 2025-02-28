@@ -79,11 +79,13 @@ function resetState() {
 function selectAnswer(e) {
   const selectedBtn = e.target;
   const isCorrect = selectedBtn.dataset.correct === "true";
-  if (isCorrect) {
-    selectedBtn.classList.add("correct");
-  } else {
-    selectedBtn.classList.add("incorrect");
-  }
+if (isCorrect) {
+  selectedBtn.classList.add("correct");
+  score++; // Doğru cevabı verdiğinizde skoru artırın
+} else {
+  selectedBtn.classList.add("incorrect");
+}
+
 
   Array.from(answerButtons.children).forEach(button => {
     if (button.dataset.correct === "true") {
@@ -95,7 +97,7 @@ function selectAnswer(e) {
 }
 function showScore() {
   resetState();
-  questionElement.innerHTML = `You scored ${score}} out of ${questions.length}`;
+  questionElement.innerHTML = `Puanınız: ${score} / ${questions.length}`;
   nextButton.innerHTML = "Play Again"
   nextButton.style.display = "block";
 }
