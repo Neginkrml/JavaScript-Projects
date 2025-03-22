@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+}
+
+:root {
+  --primary-color: rgb(67, 67, 124);
+  --light-color: rgb(245, 244, 244);
+  --dark-color: rgb(7, 6, 6);
+  --danger-color: rgb(185, 40, 40);
+  --warning-color: rgb(255, 209, 3);
+  --info-color: rgb(159, 194, 204);
+  --gray-color: rgb(136, 148, 148);
+}
+
+body {
+  background-color: rgb(228, 237, 237);
+  color: var(--dark-color);
+  min-height: 100vh;
+  padding: 20px;
+}
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgb(56, 53, 53);
+}
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: rgba(64, 78, 89, 0.901);
+}
+.input-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: var(--light-color);
+  border-radius: 10px;
+}
+.todo-input {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid gray;
+  font-size: 14px;
+}
+.priority-selector {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+}
+.priority-button {
+  flex: 1;
+  padding: 8px;
+  border: none;
+  border-radius: 6px;
+  /* font-weight: 400; */
+  cursor: pointer;
+  opacity: 0.5;
+}
+.priority-button.selected {
+  opacity: 1;
+}
+.very-high {
+  background-color: var(--danger-color);
+}
+.high {
+  background-color: var(--warning-color);
+}
+.normal {
+  background-color: var(--info-color);
+}
+.low {
+  background-color: var(--gray-color);
+}
+.add-btn {
+  padding: 10px;
+  background-color: rgb(233, 226, 226);
+  color: var(--dark-color);
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+.todos-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+  min-height: 100px;
+}
+.status-bar {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-top: 1px solid gray;
+}
+.todo-count {
+  font-size: 14px;
+  color: var(--dark-color);
+}
+.clear-completed {
+  background: none;
+  border: none;
+  color: var(--danger-color);
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: 600;
+}

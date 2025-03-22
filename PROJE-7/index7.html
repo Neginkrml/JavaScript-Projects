@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.11.13/dayjs.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"></script>
+    <script src="../PROJE-7/task-7.js"></script>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abel&family=Cinzel:wght@400..900&family=Exo:ital,wght@0,100..900;1,100..900&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Monomakh&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playwrite+IT+Moderna:wght@100..400&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sora:wght@100..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../PROJE-7/proje7.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Todo List</h1>
+      <div class="input-section">
+        <input type="text" class="todo-input" placeholder="Bir metin giriniz" />
+        <div class="priority-selector">
+          <button class="priority-button very-high" data-priority="very-high">
+            Çok Önemli
+          </button>
+          <button class="priority-button high" data-priority="high">
+            Önemli
+          </button>
+          <button class="priority-button normal" data-priority="normal">
+            Normal
+          </button>
+          <button class="priority-button low" data-priority="low">
+            Önemsiz
+          </button>
+        </div>
+        <button class="add-btn" disabled>Ekle</button>
+      </div>
+      <div class="todos-container">
+        <!-- Todo öğeleri js ile buraya ekleencektir -->
+      </div>
+      <div class="status-bar">
+        <span class="todo-count">0 Görev</span>
+        <button class="clear-completed">Tamamlananları Temizle</button>
+      </div>
+    </div>
+  </body>
+</html>
